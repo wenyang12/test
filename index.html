@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>git命令</title>
+    <style>
+        code{
+            background: #ffff00;
+        }
+    </style>
+</head>
+<body>
+<div id="git-container">
+    <div class="model">
+        <h2>1、创建秘钥
+            <small>(之后再本机上与github自己的账号连接就不用一直输入账号密码了)</small>
+        </h2>
+        <p><code>git ssh-keygen -t rsa -C "github里注册的邮箱"</code></p>
+
+        <p>输入以上命令一直按回车后，会生成.ssh文件夹，进去，打开id_rsa.pub,复制里面的key</p>
+
+        <p>回到github上，进入 Account Settings（账户配置），左边选择SSH Keys，Add SSH Key,title随便填，粘贴在你电脑上生成的key。</p>
+
+        <p>为了验证是否成功，输入以下命令：</p>
+
+        <p><code>$ ssh -T git@github.com</code></p>
+
+        <p>回车提示为“Hi [自己的用户名]! You've successfully authenticated, but GitHub does not provide shell access.”那就说明我们已经成功连上了github</p>
+    </div>
+    <div class="model">
+        <h2>2、连接github里的某个库 上传本地库到github</h2>
+        <p><code>git remote add [自己取一个名字] git@github.com:[github上的用户名]/[库名]</code></p>
+
+        <p>回车后就可以连上这个库了（取一个名字用于替换后边这个“git@github.com:[github上的用户名]/[库名]”）方便以后命令书写</p>
+
+        <p><code>git push -u [刚刚自己取得名字] [要上传到github上的哪个分支名]</code></p>
+
+        <p>回车就可以 把本地创建的库文件对应上传到github里自己的对应的库了</p>
+
+    </div>
+    <div class="model">
+        <h2>2、更新github库到本地库</h2>
+        <p><code>git fetch</code></p>
+
+        <p>回车后就可以从远程仓库下载新分支与数据</p>
+
+        <p><code>git merge [上边自己取得名字]/[库名]</code></p>
+
+        <p>回车就可以 从远端仓库提取数据并尝试合并到当前分支</p>
+
+    </div>
+
+</div>
+</body>
+</html>
