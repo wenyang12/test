@@ -50,6 +50,35 @@
 
     </div>
 
+    <div class="model">
+        <h2>2、git命令</h2>
+        <p><code>git remote</code>(查看当前配置有哪些远程仓库)</p>
+        <p><code>git remote -v</code>(执行时加上 -v 参数，你还可以看到每个别名的实际链接地址。)</p>
+        <p><code>git fetch</code>(从远程仓库下载新分支与数据)</p>
+        <p><code>git pull</code>(从远端仓库提取数据并尝试合并到当前分支)</p>
+        <p>或</p>
+        <p><code>git fetch [alias]</code>(从远程仓库下载新分支与数据 alias为自己取得别名)</p>
+        <p><code>git merge [alias]/[branch] </code>(从远端仓库提取数据并尝试合并到当前分支)</p>
+        <p><code>git push [alias] [branch] </code>（推送你的新分支与数据到某个远端仓库）注：命令将你的 [branch] 分支推送成为 [alias] 远程仓库上的 [branch] 分支</p>
+        <p><code>git push -u [alias] [branch] </code>（推送你当前分支到远端仓库branch分支）</p>
+        <p><code>git remote rm [别名]</code>（删除远程仓库）</p>
+        <p><code>git status</code>（查看提交状态）</p>
+        <p><code>git status -s</code>（查看提交状态简略）</p>
+        <p><code>touch [文件名]</code>（新建一个文件）</p>
+        <p><code>vim [文件名]</code>（进入文件编辑）</p>
+        <p><code>a || ZQ || ZZ</code>（激活编辑器输入 || 不保存退出文件编辑 || 保存之后退出文件编辑）</p>
+        <p><code>git add . || git add [文件名 文件名...]</code>（提交所有本地文件但暂存区 || 提交指定的文件到暂存区）</p>
+        <p><code>git commit -m "[输入提交注释]"</code>（把暂存区的文件提交到git版本库）</p>
+        <p><code>git checkout . || git checkout --[文件名]</code>（会用暂存区全部的文件替换工作区的文件 || 会用暂存区指定的文件替换工作区的文件）</p>
+        <p><code>git rm --cached [文件名]</code>（会直接从暂存区删除文件，工作区则不做出改变）</p>
+        <p><code>git reset (HEAD || master)</code>（暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响）</p>
+        <p><code>git checkout HEAD . || git checkout HEAD [文件名]</code>（会用 HEAD 指向的 master 分支中的全部或者部分文件替换暂存区和以及工作区中的文件）</p>
+        <p><code>git rm --cached [文件名]</code>（）</p>
+        <p><code>git rm --cached [文件名]</code>（）</p>
+        <p><img src="http://www.w3cschool.cc/wp-content/uploads/2015/02/1352126739_7909.jpg"> </p>
+
+    </div>
+
 </div>
 </body>
 </html>
