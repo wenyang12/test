@@ -1,3 +1,4 @@
 tests
 add local some texts
 add remote some texts
+add some tests on master
